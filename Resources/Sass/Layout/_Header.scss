@@ -1,0 +1,54 @@
+@import '../Component/_logo';
+@import '../Component/_nav';
+
+.header-home {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    .grid {
+        border-top: 1px solid #e4dada;
+        border-bottom: 1px solid #e4dada;
+    }
+}
+
+
+// tablet 768 1024
+@media only screen 
+and (max-width: 1024px) 
+and (min-width: 768px) 
+and (-webkit-min-device-pixel-ratio: 1) {
+    body {
+        font-size: 14px;
+    }
+    .header-home { 
+        grid-template-columns: repeat(1, 1fr);
+        // .grid {
+            
+        // }
+        .grid.nav {
+            position: absolute;
+            top: 0;
+            height: 53px;
+        }
+    }
+}
+
+// phone 360 760
+@media only screen 
+and (max-width: 768px) 
+and (min-width: 360px) 
+and (-webkit-min-device-pixel-ratio: 1) {
+    body {
+        font-size: 12px;
+    }
+    .header-home { 
+        grid-template-columns: repeat(1, 1fr);
+        // .grid {
+            
+        // }
+        .grid.nav {
+            position: absolute;
+            top: 0;
+            height: 53px;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@keyframes hoverCategory {
+    0% {
+        left: 0;
+        opacity: 0;
+    }
+    100% {
+        left: 15%;
+        opacity: 1;
+    }
+}
+
+@keyframes hoverCategoryTablet {
+    0% {
+        left: 0;
+        opacity: 0;
+    }
+    100% {
+        left: 100%;
+        opacity: 1;
+    }
+}
+
