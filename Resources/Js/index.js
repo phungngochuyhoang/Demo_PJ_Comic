@@ -13,10 +13,9 @@ $(document).ready(() => {
 
     $('.close-nav').click(() => { 
         $('.ul-mobile').animate({'left': -100 + "%"}, 1000)
-        setInterval(() => {
-            $('.bar-nav').show();  
-        }, 1000) 
+        $('.bar-nav').show();  
     })
 })
+
 
 
