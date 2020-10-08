@@ -1,0 +1,49 @@
+.header {
+    position: relative;
+    border-radius: 5px 5px 0 0;
+    h2 {
+        font-weight: 100;
+        margin: 8px 0 0 20px;
+        padding-bottom: 8px;
+        cursor: default;
+    }
+}
+
+.body {
+    border-radius: 0 0 5px 5px;
+    .stt-top {
+        margin: 20px 0;
+        width: calc(100% - 1px);
+        height: auto;
+        display: flex;
+        position: relative;
+        span {
+            padding: 5px 5px 5px 10px;
+            display: block;
+            text-shadow: .2px .2px 1px #111;
+            a {
+                text-decoration: none;
+            }
+            a:hover {
+                color: rgb(157, 152, 152);
+            }
+        }
+        .view {
+           position: absolute;
+           right: 10px;
+        }
+    }
+    .stt-top::before {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 8px;
+        border-bottom: 1px dashed;
+        width: calc(100% - 24px);
+    }
+    .stt-top:last-child::before {
+        content: '';
+        border-bottom: 0;
+    }
+}
+
