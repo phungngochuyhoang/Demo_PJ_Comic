@@ -3,9 +3,9 @@
 .section-top-story {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    background-image: url('../../../Resources/Img/bg-banner.jpg');
-    background-size: cover;
-    background-position: center;
+    // background-image: url('../../../Resources/Img/bg-banner.jpg');
+    // background-size: cover;
+    // background-position: center;
 }
 .top-seen {
     grid-column: 1 / span 4;
@@ -20,7 +20,7 @@
     padding: 25px 5px;
     height: auto;
     margin: 0 40px;
-    opacity: .55;
+    opacity: .9;
     .header {
         width: 100%;
         height: 10%;

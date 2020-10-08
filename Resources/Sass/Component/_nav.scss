@@ -20,9 +20,10 @@
                 text-decoration: none;
                 padding: 18px 10px;
                 line-height: 55px;
+                text-shadow: .1px .1px 1px #111;
             }
             a:hover{
-                color: #9e9696;
+                color: #464242;
                 transform: 1s;
             }
             .nav-child {
@@ -46,6 +47,7 @@
                     transition: .2s;
                     margin-left: 2em;
                     background-color: transparent;
+                    border: none;
                     a {
                         font-size: 14px;
                         color: #a39f9f;

@@ -28,9 +28,38 @@
                 color: rgb(157, 152, 152);
             }
         }
+        .stt {
+            font-weight: bold;
+            position: relative;
+            left: 5px;
+            font-size: 13px;
+            img {
+                position: absolute;
+                top: -5px;
+                left: 0;
+                width: 35px;
+                height: 35px;
+            }
+            .number {
+                position: relative;
+                top: -4px;
+                left: -7px;
+                z-index: 1;
+                color: #fff;
+            }
+        }
+        .name{
+           position: absolute;
+           left: 40px;
+           top: -1px;
+           font-size: 14px;
+        }
         .view {
            position: absolute;
            right: 10px;
+           i {
+               font-size: 14px;
+           }
         }
     }
     .stt-top::before {

@@ -85,10 +85,11 @@
   text-decoration: none;
   padding: 18px 10px;
   line-height: 55px;
+  text-shadow: .1px .1px 1px #111;
 }
 
 .nav ul li a:hover {
-  color: #9e9696;
+  color: #464242;
   -webkit-transform: 1s;
           transform: 1s;
 }
@@ -123,6 +124,7 @@
   transition: .2s;
   margin-left: 2em;
   background-color: transparent;
+  border: none;
 }
 
 .nav ul li .nav-child li a {
@@ -468,9 +470,43 @@
   color: #9d9898;
 }
 
+.body .stt-top .stt {
+  font-weight: bold;
+  position: relative;
+  left: 5px;
+  font-size: 13px;
+}
+
+.body .stt-top .stt img {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 35px;
+  height: 35px;
+}
+
+.body .stt-top .stt .number {
+  position: relative;
+  top: -4px;
+  left: -7px;
+  z-index: 1;
+  color: #fff;
+}
+
+.body .stt-top .name {
+  position: absolute;
+  left: 40px;
+  top: -1px;
+  font-size: 14px;
+}
+
 .body .stt-top .view {
   position: absolute;
   right: 10px;
+}
+
+.body .stt-top .view i {
+  font-size: 14px;
 }
 
 .body .stt-top::before {
@@ -492,9 +528,6 @@
   display: grid;
   -ms-grid-columns: (1fr)[12];
       grid-template-columns: repeat(12, 1fr);
-  background-image: url("../../../Resources/Img/bg-banner.jpg");
-  background-size: cover;
-  background-position: center;
 }
 
 .top-seen {
@@ -519,7 +552,7 @@
   padding: 25px 5px;
   height: auto;
   margin: 0 40px;
-  opacity: .55;
+  opacity: .9;
 }
 
 .top .header {
