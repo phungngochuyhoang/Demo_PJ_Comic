@@ -76,8 +76,6 @@
 .nav ul li {
   display: inline-block;
   word-spacing: 1px;
-  width: 120px;
-  height: 55px;
   text-align: center;
   margin-left: 3em;
 }
@@ -85,9 +83,8 @@
 .nav ul li a {
   text-transform: capitalize;
   text-decoration: none;
+  padding: 18px 10px;
   line-height: 55px;
-  font-weight: bold;
-  padding: 10px;
 }
 
 .nav ul li a:hover {
@@ -113,30 +110,31 @@
   height: auto;
   visibility: hidden;
   z-index: 999;
+  border: none;
 }
 
 .nav ul li .nav-child li {
-  width: 120px;
-  height: 40px;
   position: relative;
   right: 0;
-  margin: 20px 18px 0;
   text-align: center;
   background-color: white;
-  border: 1px solid #a39f9f;
   cursor: pointer;
   -webkit-transition: .2s;
   transition: .2s;
+  margin-left: 2em;
+  background-color: transparent;
 }
 
 .nav ul li .nav-child li a {
   font-size: 14px;
   color: #a39f9f;
-  line-height: 40px;
-}
-
-.nav ul li .nav-child li:last-child {
-  margin-bottom: 20px;
+  line-height: 45px;
+  border: 1px solid;
+  padding: 0;
+  display: inline-block;
+  width: 100px;
+  margin: 8px 0;
+  background-color: #fff;
 }
 
 .nav ul li .nav-child li:hover {
@@ -144,7 +142,6 @@
           transform: translate(0, -5px);
   -webkit-transition: .2s;
   transition: .2s;
-  border: 1px solid #444141;
 }
 
 .nav ul li .nav-child li:hover a {
@@ -257,8 +254,8 @@
     border: 1px solid;
     margin: 20px 0 20px 20px;
     position: relative;
-    width: 100px;
-    height: 45px;
+    width: 90px;
+    height: 35px;
   }
   .nav ul li .nav-child {
     display: -webkit-box;
@@ -279,21 +276,19 @@
     top: -1px;
     left: calc(100% + 1px);
     background-color: transparent;
+    border: none;
   }
   .nav ul li .nav-child li {
-    margin: 10px 15px;
+    width: 120px;
   }
-  .nav ul li .nav-child li:last-child {
-    margin-bottom: 12px;
+  .nav ul li .nav-child li a {
+    font-size: 13px;
   }
   .nav ul li a {
-    line-height: 45px;
+    line-height: 35px;
   }
   .nav ul li a:hover {
     color: #444141;
-  }
-  .nav ul li.last {
-    right: 10px;
   }
   .nav ul li:hover > ul.nav-child {
     -webkit-animation: hoverCategoryTablet .33s linear;
@@ -354,16 +349,18 @@
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    width: 250px;
+    width: 235px;
     height: auto;
     position: absolute;
     top: -1px;
     left: calc(100% + 1px);
     background-color: transparent;
     overflow: hidden;
+    border: none;
   }
   .nav ul li .nav-child li {
-    margin: 10px 9px;
+    border: none;
+    margin: 10px 5px;
     padding: 0;
     width: 95px;
     height: 25px;
@@ -372,9 +369,6 @@
   .nav ul li .nav-child li a {
     font-size: 10px;
     line-height: 25px;
-  }
-  .nav ul li .nav-child li:last-child {
-    margin-bottom: 12px;
   }
   .nav ul li a {
     line-height: 25px;
@@ -406,7 +400,7 @@
 
 @media only screen and (max-width: 1024px) and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
   body {
-    font-size: 14px;
+    font-size: 13px;
   }
   .header-home {
     -ms-grid-columns: (1fr)[1];
