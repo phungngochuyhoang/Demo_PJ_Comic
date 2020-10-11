@@ -20,7 +20,7 @@ $(document).ready(() => {
 
 // slide hot story
 
-var obj = {
+var objSlideHot = {
     slidesPerView: 6,
     spaceBetween: 10,
     freeMode: true,
@@ -36,11 +36,9 @@ var obj = {
 }
 
 if(window.innerWidth <= 1024 && window.innerWidth > 568) {
-   obj.slidesPerView = 5;
+    objSlideHot.slidesPerView = 5;
 }else if(window.innerWidth <= 568 && window.innerWidth >= 360) {
-    obj.slidesPerView = 4;
+    objSlideHot.slidesPerView = 1;
 }
 
-var swiper1 = new Swiper('.slide-hot', obj);
-
-console.log(window.innerWidth);
+var swiperHot = new Swiper('.slide-hot', objSlideHot);
