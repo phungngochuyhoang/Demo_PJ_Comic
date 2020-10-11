@@ -39,6 +39,7 @@ if(window.innerWidth <= 1024 && window.innerWidth > 568) {
     objSlideHot.slidesPerView = 5;
 }else if(window.innerWidth <= 568 && window.innerWidth >= 360) {
     objSlideHot.slidesPerView = 1;
+    objSlideHot.spaceBetween = 10;
 }
 
 var swiperHot = new Swiper('.slide-hot', objSlideHot);
