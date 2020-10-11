@@ -35,10 +35,11 @@ var objSlideHot = {
     },
 }
 
+
 if(window.innerWidth <= 1024 && window.innerWidth > 568) {
     objSlideHot.slidesPerView = 5;
 }else if(window.innerWidth <= 568 && window.innerWidth >= 360) {
-    objSlideHot.slidesPerView = 1;
+    objSlideHot.slidesPerView = 2;
     objSlideHot.spaceBetween = 20;
 }
 
