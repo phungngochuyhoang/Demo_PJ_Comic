@@ -1,5 +1,7 @@
 @import '../Component/top';
+@import '../Component/slide';
 
+// top story 
 .section-top-story {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -76,3 +78,17 @@ and (-webkit-min-device-pixel-ratio: 1) {
         grid-column: 1 / span 9;
     }
 }
+
+// top story 
+
+// story hot 
+.story-hot {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.hot {
+    grid-column: 1 / span 12;
+}
+
+// story hot

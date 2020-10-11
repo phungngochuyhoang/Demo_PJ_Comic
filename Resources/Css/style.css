@@ -150,6 +150,11 @@
   color: #444141;
 }
 
+.nav ul .last i {
+  font-size: 24px;
+  padding-right: 2px;
+}
+
 .nav ul li:last-child {
   position: absolute;
   right: 20px;
@@ -292,6 +297,9 @@
   .nav ul li a:hover {
     color: #444141;
   }
+  .nav ul .last i {
+    display: none;
+  }
   .nav ul li:hover > ul.nav-child {
     -webkit-animation: hoverCategoryTablet .33s linear;
             animation: hoverCategoryTablet .33s linear;
@@ -381,6 +389,9 @@
   }
   .nav ul li.last {
     right: 10px;
+  }
+  .nav ul li.last i {
+    display: none;
   }
   .nav ul li:hover > ul.nav-child {
     -webkit-animation: hoverCategoryTablet .33s linear;
@@ -523,6 +534,82 @@
   border-bottom: 0;
 }
 
+.hot .header {
+  display: inline-block;
+  position: relative;
+  top: 5px;
+}
+
+.hot .header h2 {
+  margin: 10px 30px 20px 20px;
+  position: relative;
+}
+
+.hot .header h2::before {
+  content: '';
+  position: absolute;
+  border-bottom: 1px solid #b8b3b3;
+  bottom: 4px;
+  left: 4px;
+  width: 10em;
+  height: 1px;
+}
+
+.hot .header img {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 13px;
+  right: 0;
+}
+
+.hot {
+  margin-bottom: 10px;
+}
+
+.hot .body .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.hot .body .swiper-container .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid #ddd7d7;
+  overflow: hidden;
+  width: 250px;
+  height: 300px;
+}
+
+.hot .body .swiper-container .swiper-slide img {
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
+  .hot .body .swiper-container .swiper-slide {
+    width: 200px;
+    height: 220px;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 360px) and (-webkit-min-device-pixel-ratio: 1) {
+  .hot .body .swiper-container .swiper-slide {
+    width: 100px;
+    height: 150px;
+  }
+}
+
 .section-top-story {
   display: -ms-grid;
   display: grid;
@@ -611,6 +698,19 @@
     -ms-grid-column-span: 9;
     grid-column: 1 / span 9;
   }
+}
+
+.story-hot {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+}
+
+.hot {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1 / span 12;
 }
 
 * {

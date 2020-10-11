@@ -69,6 +69,10 @@
                 }
             }
         }
+        .last i {
+            font-size: 24px;
+            padding-right: 2px;
+        }
         li:last-child {
            position: absolute;
            right: 20px;
@@ -192,6 +196,9 @@ and (-webkit-min-device-pixel-ratio: 1) {
                     color: #444141;
                 }
             }
+            .last i {
+                display: none;
+            }
             li:hover > ul.nav-child {
                 animation: hoverCategoryTablet .33s linear;
             }
@@ -272,6 +279,9 @@ and (-webkit-min-device-pixel-ratio: 1) {
             }
             li.last {
                right: 10px;
+                i {
+                    display: none;
+                }
             }
             li:hover > ul.nav-child {
                 animation: hoverCategoryTablet .33s linear;
