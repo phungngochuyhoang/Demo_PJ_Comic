@@ -59,6 +59,8 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
+  z-index: 999;
 }
 
 .nav .bar-nav {
@@ -224,6 +226,7 @@
 @media only screen and (max-width: 1024px) and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
   .nav {
     width: 100%;
+    height: 100%;
   }
   .nav .bar-nav {
     position: absolute;
@@ -563,6 +566,10 @@
   right: 0;
 }
 
+.hot .body {
+  margin-bottom: 10px;
+}
+
 .hot .body .swiper-container {
   width: 100%;
   height: 100%;
@@ -581,27 +588,29 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #ddd7d7;
-  overflow: hidden;
-  width: 250px;
   height: 300px;
 }
 
-.hot .body .swiper-container .swiper-slide img {
+.hot .body .swiper-container .swiper-slide a {
+  border: 1px solid #ddd7d7;
+  overflow: hidden;
+  height: 100%;
+}
+
+.hot .body .swiper-container .swiper-slide a img {
   width: 100%;
   height: 100%;
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
   .hot .body .swiper-container .swiper-slide {
-    width: 200px;
     height: 220px;
   }
 }
 
 @media only screen and (max-width: 768px) and (min-width: 360px) and (-webkit-min-device-pixel-ratio: 1) {
   .hot .body .swiper-container .swiper-slide {
-    height: 500px;
+    height: 180px;
   }
 }
 
@@ -610,6 +619,8 @@
   display: grid;
   -ms-grid-columns: (1fr)[12];
       grid-template-columns: repeat(12, 1fr);
+  position: relative;
+  z-index: 1;
 }
 
 .top-seen {
@@ -655,7 +666,7 @@
 @media only screen and (max-width: 1024px) and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
   .section-top-story {
     position: relative;
-    z-index: -1;
+    z-index: 1;
   }
   .top {
     margin: 0 10px;
@@ -673,7 +684,7 @@
         -ms-flex-direction: column;
             flex-direction: column;
     position: relative;
-    z-index: -1;
+    z-index: 1;
   }
   .top {
     margin: 0 30px;

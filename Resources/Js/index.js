@@ -8,11 +8,13 @@ $(document).ready(() => {
     })
 
     $('.bar-nav').click(() => {
+        $('body').css({'overflow': 'hidden'})
         $('.bar-nav').hide();    
         $('.ul-mobile').animate({'left': 0 }, 1000)
     })
 
     $('.close-nav').click(() => { 
+        $('body').css({'overflow': 'auto'})
         $('.ul-mobile').animate({'left': -100 + "%"}, 1000)
         $('.bar-nav').show();  
     })
@@ -22,7 +24,7 @@ $(document).ready(() => {
 
 var objSlideHot = {
     slidesPerView: 6,
-    spaceBetween: 10,
+    spaceBetween: 8,
     freeMode: true,
     loop: true,
     pagination: {
@@ -33,14 +35,6 @@ var objSlideHot = {
         delay: 2500,
         disableOnInteraction: false,
     },
-}
-
-
-if(window.innerWidth <= 1024 && window.innerWidth > 568) {
-    objSlideHot.slidesPerView = 5;
-}else if(window.innerWidth <= 568 && window.innerWidth >= 360) {
-    objSlideHot.slidesPerView = 2;
-    objSlideHot.spaceBetween = 20;
 }
 
 var swiperHot = new Swiper('.slide-hot', objSlideHot);
