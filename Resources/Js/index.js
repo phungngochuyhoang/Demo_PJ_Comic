@@ -24,7 +24,7 @@ $(document).ready(() => {
 
 var objSlideHot = {
     slidesPerView: 6,
-    spaceBetween: 8,
+    spaceBetween: 10,
     freeMode: true,
     loop: true,
     pagination: {

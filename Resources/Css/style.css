@@ -610,7 +610,7 @@
 
 @media only screen and (max-width: 768px) and (min-width: 360px) and (-webkit-min-device-pixel-ratio: 1) {
   .hot .body .swiper-container .swiper-slide {
-    height: 180px;
+    height: 300px;
   }
 }
 
