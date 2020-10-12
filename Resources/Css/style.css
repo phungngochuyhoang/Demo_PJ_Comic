@@ -566,8 +566,8 @@
   right: 0;
 }
 
-.hot .body {
-  margin-bottom: 10px;
+.hot {
+  margin-bottom: 20px;
 }
 
 .hot .body .swiper-container {

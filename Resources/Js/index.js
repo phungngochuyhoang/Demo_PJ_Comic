@@ -37,4 +37,8 @@ var objSlideHot = {
     },
 }
 
+if(window.innerWidth <= 768 && window.innerWidth >360) {
+    objSlideHot.slidesPerView = 1;
+}
+
 var swiperHot = new Swiper('.slide-hot', objSlideHot);
