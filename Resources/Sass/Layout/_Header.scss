@@ -4,10 +4,6 @@
 .header-home {
     display: grid;
     grid-template-columns: 20% 80%;
-    .grid {
-        border-top: 1px solid #e4dada;
-        border-bottom: 1px solid #e4dada;
-    }
 }
 
 
@@ -21,9 +17,6 @@ and (-webkit-min-device-pixel-ratio: 1) {
     }
     .header-home { 
         grid-template-columns: repeat(1, 1fr);
-        // .grid {
-            
-        // }
         .grid.nav {
             position: absolute;
             top: 0;
@@ -42,9 +35,6 @@ and (-webkit-min-device-pixel-ratio: 1) {
     }
     .header-home { 
         grid-template-columns: repeat(1, 1fr);
-        // .grid {
-            
-        // }
         .grid.nav {
             position: absolute;
             top: 0;
