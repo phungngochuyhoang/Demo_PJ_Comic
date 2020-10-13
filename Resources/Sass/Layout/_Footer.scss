@@ -1,0 +1,120 @@
+.footer {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 10px 0 20px;
+    border-top: 1px solid #ede8e8;
+    margin-top: 3em;
+}
+.ls {
+    position: relative;
+    h3 {
+        padding: 10px 0 10px 20px;
+    }
+}
+.intro {
+    grid-column: 1 / span 4;
+    padding: 5px;
+    li {
+        width: 80%;
+        margin-left: 20px;
+        list-style-type: none;
+        text-align: justify;
+        line-height: 22px;
+        word-spacing: 1.4px;
+    }
+}
+.category {
+    grid-column: 5 / span 5;
+    padding-left: 10px;
+    li {
+        list-style-type: none;
+        display: inline-flex;
+        margin: 4px 4px;
+        a {
+            border: 1px solid;
+            display: block;
+            width: 120px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            text-decoration: none;
+        }
+    }
+}
+.contact {
+    grid-column: 10 / span 3;
+    li {
+        list-style: none;
+        padding: 10px 0;
+        margin-left: 4em;
+        a {
+            text-decoration: none;
+            border: 1px solid;
+            display: block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            position: relative;
+            cursor: pointer;
+            span.email,
+            span.phone {
+                position: absolute;
+                visibility: hidden;
+                left: 0;
+                opacity: 0;
+                transition: .5s;
+            }
+        }
+        a:hover > span {
+            visibility: visible;
+            display: inline-block;
+            left: 3em;
+            opacity: 1;
+            transition: .5s;
+        }
+    }
+}
+
+
+@media only screen 
+and (max-width: 1024px) 
+and (min-width: 768px) 
+and (-webkit-min-device-pixel-ratio: 1) {
+    .footer {
+        .contact {
+            li {
+                margin-left: 0;
+                a span {
+                    left: -10px;
+                }
+                a:hover > span {
+                    left: 3.6em;
+                }
+            }
+        }
+    }
+}
+
+@media only screen 
+and (max-width: 768px) 
+and (min-width: 360px) 
+and (-webkit-min-device-pixel-ratio: 1) {
+    .intro,
+    .category,
+    .contact {
+        grid-column: 1 / span 12;
+    }
+    .contact {
+        li {
+            margin-left: 4em;
+            a span {
+                left: 0px;
+            }
+            a:hover > span {
+                left: 4em;
+            }
+        }
+    }
+}

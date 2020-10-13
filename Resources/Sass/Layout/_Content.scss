@@ -1,6 +1,7 @@
 @import '../Component/top';
 @import '../Component/slide';
 @import '../Component/newUpdate';
+@import '../Component/_commnet';
 
 // top story 
 .section-top-story {
@@ -106,7 +107,29 @@ and (-webkit-min-device-pixel-ratio: 1) {
 }
 
 .new-update {
-    grid-column: 1 / span 12;
+    grid-column: 1 / span 8;
 }
-
 // story new update 
+
+
+// comment 
+.comment {
+    grid-column: 9 / span 4;
+}
+// comment
+
+@media only screen 
+and (max-width: 768px) 
+and (min-width: 360px) 
+and (-webkit-min-device-pixel-ratio: 1) {
+    .section-new-update {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+    .new-update {
+        grid-column: 1 / span 12;
+    }
+    .comment {
+        grid-column: 1 / span 12;
+    }
+}

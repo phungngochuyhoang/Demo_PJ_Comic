@@ -10,12 +10,12 @@ $(document).ready(() => {
     $('.bar-nav').click(() => {
         $('body').css({'overflow': 'hidden'})
         $('.bar-nav').hide();    
-        $('.ul-mobile').animate({'left': 0 }, 1000)
+        $('.ul-mobile').animate({'left': 0 }, 500)
     })
 
     $('.close-nav').click(() => { 
         $('body').css({'overflow': 'auto'})
-        $('.ul-mobile').animate({'left': -100 + "%"}, 1000)
+        $('.ul-mobile').animate({'left': -100 + "%"}, 500)
         $('.bar-nav').show();  
     })
     // --------------------------------------------
@@ -48,3 +48,57 @@ function swiper(object) {
 swiper(objSlideHot);
 
 
+// handle length text 
+var nameStory = Array.from(document.querySelectorAll('.n-story'));
+var contentStory = Array.from(document.querySelectorAll('.c-story'));
+const MAX_LEN_N = 17;
+const MAX_LEN_C = 160;
+var textN = "";
+function nameLength(arr, max) {
+    arr.forEach((item) => {
+        if(!item.innerHTML.trim().length < max) {
+           textN = item.innerHTML.trim().slice(0, max) + ' ...';
+        }
+        item.innerHTML = textN;
+    })
+}
+nameLength(nameStory, MAX_LEN_N);
+nameLength(contentStory, MAX_LEN_C);
+
+// handle copy
+var clipboard = new ClipboardJS('.btn');
+
+clipboard.on('success', function(e) {
+    if(e.action === 'copy') {
+        e.trigger.style.border = 1 + 'px solid green';
+        e.trigger.style.background = 'green';
+        e.trigger.childNodes.forEach(item => {
+            if(item.tagName === "I") {
+                item.style.color = 'white';
+            }
+            if(item.tagName === "SPAN") {
+                item.innerHTML = 'copy';
+                item.style.color = 'green'
+                item.style.fontWeight = 'bold';
+            }
+        })
+    }
+    setTimeout(() => {
+        e.trigger.setAttribute('style', '');
+        e.trigger.childNodes.forEach(item => {
+            if(item.tagName === "I") {
+                item.setAttribute('style', '');
+            }
+            if(item.tagName === "SPAN") {
+                item.innerHTML = e.text;
+                item.setAttribute('style', '');
+            }
+        })
+    }, 1500)
+    e.clearSelection();
+});
+
+clipboard.on('error', function(e) {
+    console.error('Action:', e.action);
+    console.error('Trigger:', e.trigger);
+});
