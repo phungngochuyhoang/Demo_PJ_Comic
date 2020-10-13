@@ -8,7 +8,15 @@
 .ls {
     position: relative;
     h3 {
-        padding: 10px 0 10px 20px;
+        padding: 10px 0 15px 20px;
+        position: relative;
+    }
+    h3:before {
+        content: '';
+        position: absolute;
+        width: 150px;
+        border-bottom: 1px solid #c1c1c1;
+        bottom: 12px;
     }
 }
 .intro {
